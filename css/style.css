@@ -1,0 +1,359 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  background: #fff;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section {
+  display: block;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  font-weight: 400;
+  text-align: left;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover, a:active {
+  outline: 0;
+}
+
+a img {
+  border: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+ * Applys a breakpoint around the provided content
+ * @param  {string} $size size of the breakpoint
+ * @return {null}       nothing returned breakpoint code wrapped around content
+ */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 14px;
+  background-color: #fff;
+  color: #000;
+  font-family: "Roboto Slab", serif;
+  position: relative;
+}
+@media only screen and (min-width: 750px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+a {
+  color: #000;
+  border-bottom: #000 dashed 1px;
+  text-decoration: none;
+}
+a:hover {
+  border-bottom-style: solid;
+}
+
+.headings, h3, h2 {
+  font-family: "Annie Use Your Telescope", cursive;
+}
+
+h2 {
+  font-size: 2.8em;
+  margin-bottom: 0.5em;
+}
+@media only screen and (min-width: 750px) {
+  h2 {
+    margin-bottom: 0.8em;
+  }
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+p {
+  margin-bottom: 1.2em;
+}
+
+.content-blocks, section {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 300px) {
+  .content-blocks, section {
+    padding: 2em;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .content-blocks, section {
+    padding: 2em;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .content-blocks, section {
+    padding: 2em 3.5em;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .content-blocks, section {
+    padding: 2em 0;
+  }
+}
+
+header {
+  text-align: center;
+  padding: 2em 0;
+  margin-bottom: 3em;
+  height: 100vh;
+  position: relative;
+  background: url("../img/sketch-desktop-scene.svg") no-repeat center center;
+  background-size: 500px 237px;
+}
+@media only screen and (orientation: portrait) {
+  header {
+    padding-top: 3em;
+    height: 50vh;
+  }
+}
+@media only screen and (min-width: 750px) {
+  header {
+    background-size: 900px 435px;
+    background-position: center center;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  header {
+    padding-top: 4em;
+    background-size: 1200px 580px;
+    background-position: center center;
+  }
+}
+header #site-title {
+  font-size: 0px;
+  width: 230px;
+  height: 88px;
+  margin: 0 auto;
+  background: url("../img/ashley-needham-logo.svg") no-repeat center center;
+}
+@media only screen and (min-width: 750px) and (orientation: portrait) {
+  header #site-title {
+    width: 330px;
+    height: 120px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  header #site-title {
+    width: 330px;
+    height: 120px;
+  }
+}
+header:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 30px;
+  bottom: -30px;
+  left: 0;
+  position: absolute;
+  background: url("../img/dark-hr.svg") no-repeat center center;
+  background-size: 100% 10px;
+}
+@media only screen and (min-width: 1400px) {
+  header:after {
+    background-size: 100% 20px;
+  }
+}
+
+section .text {
+  display: block;
+  width: 100%;
+}
+section .image {
+  display: block;
+  width: 100%;
+  margin-top: 4em;
+  text-align: center;
+}
+section .image img {
+  max-width: 250px;
+}
+section:after {
+  content: "";
+  display: block;
+  background: url("../img/light-hr.svg") no-repeat center center;
+  background-size: 100% 10px;
+  width: 100%;
+  height: 30px;
+  margin-top: 3em;
+}
+@media only screen and (min-width: 750px) {
+  section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section .text {
+    width: 60%;
+  }
+  section .image {
+    width: 35%;
+    margin-left: 5%;
+    padding-top: 3em;
+    margin-top: 0;
+  }
+  section .image img {
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  section .text {
+    width: 55%;
+  }
+  section .image {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  section .text {
+    width: 50%;
+  }
+  section .image {
+    width: 35%;
+    margin-left: 10%;
+  }
+}
+
+.service {
+  margin-bottom: 5em;
+}
+@media only screen and (min-width: 750px) {
+  .service {
+    display: flex;
+  }
+  .service .image {
+    padding-top: 1.5em;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .service#api-development .text {
+    order: 2;
+  }
+  .service#api-development .image {
+    margin-left: 0;
+    margin-right: 5%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .service#api-development .image {
+    margin-right: 10%;
+  }
+}
+
+#software-logos ul {
+  list-style: none;
+  padding: 0 1em;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (min-width: 1000px) {
+  #software-logos ul {
+    padding: 0 3em;
+  }
+}
+#software-logos ul li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1em;
+}
+#software-logos ul li img {
+  max-width: 125px;
+}
+
+.contact-details {
+  list-style: none;
+  padding: 0;
+  margin: 2em 0;
+  font-size: 1.4em;
+}
+.contact-details li {
+  display: inline-block;
+  padding-right: 2em;
+  margin-bottom: 2em;
+}
+.contact-details li:last-child {
+  margin-bottom: 0;
+}
+.contact-details li .type {
+  display: block;
+  font-family: "Annie Use Your Telescope", cursive;
+}
+@media only screen and (min-width: 750px) {
+  .contact-details .text {
+    width: 60%;
+  }
+  .contact-details .image {
+    width: 25%;
+    margin-left: 10%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .contact-details .text {
+    width: 60%;
+  }
+  .contact-details .image {
+    width: 25%;
+    margin-left: 10%;
+  }
+}
+
+footer {
+  text-align: center;
+  font-family: "Annie Use Your Telescope", cursive;
+  padding-bottom: 2em;
+}
+
+/*# sourceMappingURL=style.css.map */
